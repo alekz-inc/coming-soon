@@ -16,12 +16,14 @@
 :root {
     --white: #fff;
     --black: #121212;
-    --dark: #1e1e1e;
+    --dark: #273036;
 
     --primary: #032539;
     --secondary: #1c768f;
     --third: #fa991c;
 
+    --blue: #0099ff;
+    --green: #00cba9;    
     --light-grey: rgba(22, 8, 43, 0.1);
     
     --header-height: 3.5rem;
@@ -50,6 +52,7 @@
 .header {
     position: fixed;
     top: 0;
+    background: var(--white);
     left: 0;
     width: 100%;
     z-index: var(--z-fixed);
@@ -81,7 +84,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2em;
+
 }
 
 #myHeading {
@@ -103,11 +106,45 @@
     margin: 0;
     padding: 0;
 }
+.sect-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+
+}
+.section-1 {
+    background: var(--blue);
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
 
 .introLinks {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 5em;
+    width: 25vw;
+    height: auto;
+}
+
+
+.iLink a {
+    color: var(--dark);
+    text-decoration: none;
+    text-align: center;
+    font-family: 'myFont';
+    background: var(--white);
+    padding: 1em;
+}
+
+.between-sections {
+    height: 5vh;
 }
 
 @media screen and (max-width: 768px) {
