@@ -13,6 +13,7 @@
     font-family: 'myBodyText';
     src: url(fonts/Manrope-Regular.ttf);
 }
+
 :root {
     --white: #fff;
     --black: #121212;
@@ -23,9 +24,9 @@
     --third: #fa991c;
 
     --blue: #0099ff;
-    --green: #00cba9;    
+    --green: #00cba9;
     --light-grey: rgba(22, 8, 43, 0.1);
-    
+
     --header-height: 3.5rem;
     --nav-width: 219px;
 
@@ -79,6 +80,11 @@
     color: var(--textColor);
 }
 
+.headerText:hover {
+    color: var(--blue);
+    transition: .25s ease;
+}
+
 .introContainer {
     margin-top: 7em;
     display: flex;
@@ -90,12 +96,21 @@
 
 #myHeading {
     font-family: 'myFont';
-    font-size: 2.5em;
+    font-size: 2.3em;
     text-align: center;
     color: var(--textColor);
 }
+
+#mySectionText {
+    font-family: 'myFont';
+    font-size: 1.8em;
+    text-align: center;
+    color: var(--white);
+    letter-spacing: 1px;
+}
+
 #myText {
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-family: 'myBodyText';
     text-align: center;
     font-weight: 400;
@@ -107,6 +122,7 @@
     margin: 0;
     padding: 0;
 }
+
 .sect-1 {
     display: flex;
     flex-direction: column;
@@ -115,9 +131,10 @@
     padding: 0;
 
 }
+
 .section-1 {
     background: var(--blue);
-    height: 60vh;
+    height: 40vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -128,10 +145,7 @@
 .introLinks {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 5em;
-    width: 25vw;
-    height: auto;
+    gap: 3em;
 }
 
 
@@ -140,25 +154,65 @@
     text-decoration: none;
     text-align: center;
     font-family: 'myFont';
+    font-size: 1em;
     background: var(--white);
     padding: 1em;
+    position: relative;
+    float: right;
+    letter-spacing: 1px;
 }
 
 .between-sections {
-    height: 5vh;
+    height: 7vh;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footerContainer {
+    background: var(--blue);
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerContainer-1 {
+    font-family: 'myBodyText';
+    font-size: 1.1em;
 }
 
 @media screen and (max-width: 768px) {
     .section-1-img img {
         height: 23vh;
     }
+
     #myHeading {
         font-size: 1.5em;
     }
+
     #myText {
         font-size: 1.2em;
     }
+
     .introContainer {
         padding: 2em;
+    }
+    .section-1 {
+        flex-direction: column;
+        height: 80vh;
+    }
+    .introLinks {
+        align-items: center;
+    }
+    #mySectionText {
+        font-size: 1.2em;
+    }
+    .iLink a {
+        font-size: .8em;
     }
 }
